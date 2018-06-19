@@ -6,13 +6,13 @@ var rockTwo;
 var rockThree;
 var compScore = Math.floor(Math.random() * 120 + 19);
 var userScore = [];
-
+alert("Dfgdfg")
 function newGame() {
-  //compScore = Math.floor(Math.random() * 120 + 19);
+  compScore = Math.floor(Math.random() * 120 + 19);
   rockOne = Math.floor(Math.random() * 12 + 1);
   rockTwo = Math.floor(Math.random() * 12 + 1);
   rockThree = Math.floor(Math.random() * 12 + 1);
-  console.log(compScore);
+ console.log(compScore);
 }
 
 function reset() {}
@@ -26,9 +26,12 @@ if (userScore > compScore) {
   //reset()
 }
 
-$("h1").click(function() {
+$("h1").on("click",function() {
   alert("h1 clicked");
 });
+// $("div").click(function() {
+//   alert("h1 clicked");
+// });
 
 //getting userScore
 document.getElementById("rockOne").textContent = rockOne;
