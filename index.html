@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/javascript/game.js">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- jquery cdn -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script> -->
     <title>Crystal Game</title>
 </head>
 
@@ -21,7 +26,37 @@
     <h4>The value of each crystal id hidden from you until you click on it.</h4>
     <h4>Each time when the game starts, the game will change the values of each crystal.</h4>
 
+    <!-- add 3 buttons for each rock -->
+    <div class="container">
+        <img src="assets/images/rockone.png" height="100px" width="100px">
+        <button class="btn" value="rockOne">Rock 1</button>
+    </div>
+    <div class="container">
+        <img src="assets/images/rocktwo.png" height="100px" width="100px">
+        <button class="btn">Rock 2</button>
+    </div>
+    <div class="container">
+        <img src="assets/images/rockthree.png" height="100px" width="100px">
+        <button class="btn">Rock 3</button>
+    </div>
+    <!-- display wins -->
+    <div>
+        <p>Wins:
+            <span id="wins"></span>
+        </p>
+    </div>
+    <!-- display losses -->
+    <div>
+        <p>Losses:
+            <span id="losses"></span>
+        </p>
+    </div>
+    <!-- display user's current score -->
+    <!-- display comp guess -->
 
+    <script> src = "assets/javascript/game.js"</script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
