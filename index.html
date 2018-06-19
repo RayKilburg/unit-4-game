@@ -29,29 +29,42 @@
     <!-- add 3 buttons for each rock -->
     <div class="container">
         <img src="assets/images/rockone.png" height="100px" width="100px">
-        <button class="btn" value="rockOne">Rock 1</button>
+        <button id= "rockOne" class="btn" value="rockOne">Rock 1</button>
     </div>
     <div class="container">
         <img src="assets/images/rocktwo.png" height="100px" width="100px">
-        <button class="btn">Rock 2</button>
+        <button id= "rockTwo" class="btn">Rock 2</button>
     </div>
     <div class="container">
         <img src="assets/images/rockthree.png" height="100px" width="100px">
-        <button class="btn">Rock 3</button>
+        <button id= "rockThree" class="btn">Rock 3</button>
     </div>
     <div class="container">
         <img src="assets/images/rockthree.png" height="100px" width="100px">
-        <button onclick="newGame()"class="btn">Rock 4</button>
+        <button id= "rockFour" onclick="btn" class="btn">Rock 4</button>
     </div>
+    <!-- Computer Score -->
+    <div>
+            <p> Computer Score:
+                <span id="comp-score"></span>
+            </p>
+        </div>
+    <!-- user score -->
+    <div>
+            <p> User Score:
+                <span id="user-score"></span>
+            </p>
+        </div>
     <!-- display wins -->
     <div>
         <p>Wins:
             <span id="wins"></span>
         </p>
     </div>
-    <!-- display losses -->
+    <!-- display losses --> 
+    
     <div>
-        <p>Losses:
+        <p>Losses: 
             <span id="losses"></span>
         </p>
     </div>
@@ -60,8 +73,8 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script> src="/assets/javascript/game.js"</script>
-
+    <!-- <script src="/assets/javascript/game.js"></script> -->
+<script src="./assets/js/app.js"></script>
 </body>
 
 </html>
