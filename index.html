@@ -17,54 +17,61 @@
 
 <body>
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <h1>Crystal Collector</h1>
+    <h1>Rupee Riddle</h1>
 
     <h4>You will be given random number at the start of the game.</h4>
-    <h4>There are four crystals below. By clicking on a crystal you will add a specific amout of points to your total score.</h4>
+    <h4>There are four Rupee below. By clicking on a Rupee you will add a specific amount of points to your total score.</h4>
     <h4>You win the game by matching your total score to random number, you lose the game if your toatl score goes above the
         random number.</h4>
-    <h4>The value of each crystal id hidden from you until you click on it.</h4>
+    <h4>The value of each crystal is hidden from you until you click on it.</h4>
     <h4>Each time when the game starts, the game will change the values of each crystal.</h4>
 
     <!-- add 3 buttons for each rock -->
     <div class="container">
-        <img src="assets/images/rockone.png" height="100px" width="100px">
-        <button id= "rockOne" class="btn" value="rockOne">Rock 1</button>
+        <div class="row">
+            <div class="col">
+                <img id="rockOne" src="assets/images/RupeeOne.png" height="300px" width="150px">
+                <!-- <button id= "rockOne" class="btn" value="rockOne"></button>Rock 1 -->
+            </div>
+            <div class="col">
+                <img id="rockTwo" src="assets/images/RupeeTwo.png" height="300px" width="150px">
+                <!-- <button id="rockTwo" class="btn">Rock 2</button> -->
+            </div>
+            <div class="col">
+                <img id="rockThree" src="assets/images/RupeeThree.png" height="300px" width="150px">
+                <!-- <button id="rockThree" class="btn">Rock 3</button> -->
+            </div>
+            <div class="col">
+                <img id="rockFour" src="assets/images/RupeeFour.png" height="300px" width="150px">
+                <!-- <button id="rockFour" onclick="btn" class="btn">Rock 4</button> -->
+            </div>
+        </div>
     </div>
-    <div class="container">
-        <img src="assets/images/rocktwo.png" height="100px" width="100px">
-        <button id= "rockTwo" class="btn">Rock 2</button>
-    </div>
-    <div class="container">
-        <img src="assets/images/rockthree.png" height="100px" width="100px">
-        <button id= "rockThree" class="btn">Rock 3</button>
-    </div>
-    <div class="container">
-        <img src="assets/images/rockthree.png" height="100px" width="100px">
-        <button id= "rockFour" onclick="btn" class="btn">Rock 4</button>
-    </div>
+
+
+
     <!-- Computer Score -->
     <div>
-            <p> Computer Score:
-                <span id="comp-score"></span>
-            </p>
-        </div>
+        <p> Computer Score:
+            <span id="comp-score"></span>
+        </p>
+    </div>
     <!-- user score -->
     <div>
-            <p> User Score:
-                <span id="user-score"></span>
-            </p>
-        </div>
+        <p> User Score:
+            <span id="user-score"></span>
+        </p>
+    </div>
     <!-- display wins -->
     <div>
         <p>Wins:
             <span id="wins"></span>
         </p>
     </div>
-    <!-- display losses --> 
-    
+    <!-- display losses -->
+
     <div>
-        <p>Losses: 
+        <p>Losses:
             <span id="losses"></span>
         </p>
     </div>
@@ -74,7 +81,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <!-- <script src="/assets/javascript/game.js"></script> -->
-<script src="./assets/js/app.js"></script>
+    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>

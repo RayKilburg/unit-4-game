@@ -4,88 +4,63 @@ var losses = 0;
 var rockOne;
 var rockTwo;
 var rockThree;
-var compScore ;
+var compScore;
 var userScore = 0;
 function newGame() {
+  //gets random number from 120-19
   compScore = Math.floor(Math.random() * 120 + 19);
   rockOne = Math.floor(Math.random() * 12 + 1);
   rockTwo = Math.floor(Math.random() * 12 + 1);
   rockThree = Math.floor(Math.random() * 12 + 1);
-  rockFour = Math.floor(Math.random() * 500 + 19);
- console.log(compScore, rockOne, rockTwo, rockThree, rockFour);
- $("#comp-score").html(compScore);
+  rockFour = Math.floor(Math.random() * 12 + 1);
+  console.log(compScore, rockOne, rockTwo, rockThree, rockFour);
+  $("#comp-score").html(compScore);
 }
-
+//reset function
 function reset() {
-    newGame();
-    refresh();
-    userScore = 0;
+  newGame();
+  refresh();
+  userScore = 0;
 }
-
-function checkWin(){
-    if (userScore == compScore) {
-        console.log("win");
-        wins++;
-        reset();
-    }
-    else if (userScore > compScore){
-        losses++;
-        reset();
-    }
-    refresh();
-};
+//checks the score logs winner and loser
+function checkWin() {
+  if (userScore == compScore) {
+    console.log("win");
+    wins++;
+    reset();
+  } else if (userScore > compScore) {
+    losses++;
+    reset();
+  }
+  refresh();
+}
 
 newGame();
-$("h1").on("click",function() {
-    userScore += rockOne;
-  alert("h1 clicked");
+// on click for rockOne btn
+$("#rockOne").on("click", function() {
+  userScore += rockOne;
+  checkWin();
 });
-$("#rockOne").on("click",function() {
-    //alert("r1 clicked");
-    userScore += rockOne;
-    checkWin();
-    
-  });
-  $("#rockTwo").on("click",function() {
-    userScore += rockTwo;
-    checkWin();
-    
-   // alert("r2 clicked");
-  });
-  $("#rockThree").on("click",function() {
-    userScore += rockThree;
-    checkWin();
-    //alert("r3 clicked");
-  });
-  $("#rockFour").on("click",function() {
-    userScore += rockFour;
-    checkWin();
-   
-    
-   
-  });
-function refresh(){
-    $("#comp-score").html(compScore);
+$("#rockTwo").on("click", function() {
+  userScore += rockTwo;
+  checkWin();
+});
+$("#rockThree").on("click", function() {
+  userScore += rockThree;
+  checkWin();
+});
+$("#rockFour").on("click", function() {
+  userScore += rockFour;
+  checkWin();
+});
+$("h1").on("click", function() {
+  alert("cheats activated");
+  wins++;
+});
+//refreshes the game to keep the scores updated
+function refresh() {
+  $("#comp-score").html(compScore);
   $("#user-score").html(userScore);
   $("#losses").html(losses);
-  $("#wins").html(wins); 
-};
-
-// $("div").click(function() {
-//   alert("h1 clicked");
-// });
-
-//getting userScore
-//document.getElementById("rockOne").textContent = rockOne;
-//document.getElementById("wins").textContent = wins;
-
-//onclick
-//restart function
-//new game function
-//* The random number shown at the start of the game should be between 19 - 120.
-//function myFunction() {
-//document.getElementById("demo").innerHTML = Math.floor((Math.random() * 12) + 1);
-//function myFunction() {
-//document.getElementById("demo").innerHTML = Math.floor((Math.random() * 120) + 19);
-//* Each crystal should have a random hidden value between 1 - 12.
-//if userScore === compScore -win  if userScore > compScore -loss
+  $("#wins").html(wins);
+}

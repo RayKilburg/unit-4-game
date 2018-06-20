@@ -1,6 +1,7 @@
 h1 {
-  background-color: darkkhaki;
+  background-color: rgb(130, 88, 159);
   text-align: center;
+  padding: 3%;
 }
 h4 {
   text-align: center;
@@ -8,4 +9,12 @@ h4 {
 p {
   text-align: center;
   font-family: fantasy;
+}
+.container {
+  width: 100%;
+  padding: 2%;
+}
+body {
+  /* background-color: rgb(165, 177, 194); */
+  background-color: blue;
 }
